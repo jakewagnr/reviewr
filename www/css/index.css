@@ -1,0 +1,53 @@
+*{
+    -webkit-translate: translate3d(0,0,0);
+}
+
+.bar-nav , .content{
+    margin-top: 10px;
+}
+
+.star{
+  color: goldenrod;
+  font-size: 1rem;
+  position: relative;
+  padding: 0rem .5rem; /* space out the stars */
+}
+.star::before{
+  position:absolute;
+  top:0;
+  left:0;
+  content: '\2606';
+  cursor: pointer;
+}
+.star:hover::before{
+  /* the :hover should come first */
+  content: '\2605' !important;
+  color: #bada55;
+}
+.star.rated::before{
+  /* the :hover should come first */
+  content: '\2605' !important;
+}
+
+.star2{
+  color: goldenrod;
+  font-size: 1rem;
+  position: relative;
+  padding: 0rem .5rem; /* space out the stars */
+}
+.star2::before{
+  position:absolute;
+  top:0;
+  left:0;
+  content: '\2606';
+  cursor: pointer;
+}
+.star2:hover::before{
+  /* the :hover should come first */
+  content: '\2605' !important;
+  color: #bada55;
+}
+.star2.rated::before{
+  /* the :hover should come first */
+  content: '\2605' !important;
+}

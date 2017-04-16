@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: file: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/ratchet.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Reviewr</title>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-right" href="#reviewModal" id="addReview"> <span class="icon icon-compose"></span> </a>
+        <h1 class="title">REVIEWER</h1> </header>
+    <div class="content" id="page-reviews">
+        <div class="content-padded">
+            <h2>Reviews</h2>
+            <ul class="table-view" id="list-reviews"> </ul>
+        </div>
+    </div>
+    <div id="reviewModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="modalClose" class="icon icon-close pull-right" href="#reviewModal"></a>
+            <h1 class="title">Add Review</h1> </header>
+        <div class="content">
+            <div class="content-padded">
+                <form class="input-group" id="reset">
+                    <div class="input-row">
+                        <label>Product</label>
+                        <input id="name" type="text" placeholder="Ikea Lamp"> </div>
+                    <div class="media-body"> <img src="" id="imgModal"> </div>
+                    <div class="input-row">
+                        <label>Rating</label>
+                        <div class="stars" id="stars"> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> <span class="star">&nbsp;</span> </div>
+                    </div>
+                </form>
+                <p class="content-padded">
+                    <a id="photoBtn" class="btn btn-positive btn-block"> <span class="icon icon-play"></span> Take Picture
+                        <!-- process the info then dispatch click to the delete button -->
+                    </a>
+                    <a id="cancelBtn" href="#reviewModal" class="btn btn-negative btn-block"> <span class="icon icon-close"></span> Cancel
+                        <!-- dispatch click to the close button -->
+                    </a>
+                    <a id="saveBtn" href="#reviewModal" class="btn btn-primary btn-block"> <span class="icon icon-check"></span> Save
+                        <!-- process the info then dispatch click to the close button -->
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="deleteModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="modalClose" class="icon icon-close pull-right" href="#deleteModal"></a>
+            <h1 class="title" id="reviewTitle"></h1> </header>
+        <div class="content">
+            <div class="content-padded"> <img id="bigReviewImage">
+                <div id="ratingDiv"> </div>
+                <a id="deleteBtn" href="#deleteModal" class="btn btn-negative btn-block"> <span class="icon icon-close"></span> Delete
+                    <!-- process the info then dispatch click to the close button -->
+                </a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/ratchet.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
